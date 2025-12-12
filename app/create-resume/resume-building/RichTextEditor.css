@@ -1,0 +1,227 @@
+
+/* RichTextEditor.css */
+
+/* ===== GRAY COLOR THEME ===== */
+.custom-quill .ql-editor.ql-blank::before {
+  color: #9499a4 !important; /* gray-500 */
+  font-style: italic;
+}
+
+/* Main container */
+.custom-quill .ql-container.ql-snow {
+  border: 1px solid #6b7280 !important; /* gray-500 */
+  color: #d1d5db !important; /* gray-300 */
+  margin-top: 15px;
+  min-height: 130px;
+  padding-bottom: 10px;
+  background-color: transparent !important;
+}
+
+/* Toolbar styling */
+.custom-quill .ql-toolbar.ql-snow {
+  border: none !important;
+  padding: 4px 0 !important;
+  background-color: transparent !important;
+}
+
+/* Editor content area */
+.custom-quill .ql-editor {
+  background-color: transparent !important;
+  color: #d1d5db !important; /* gray-300 */
+  min-height: 100px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Remove focus border glow */
+.custom-quill .ql-container.ql-snow:focus-within {
+  border: 1px solid #9ca3af !important; /* gray-400 */
+  box-shadow: none !important;
+}
+
+/* ===== TOOLBAR BUTTONS - GRAY THEME ===== */
+.custom-quill .ql-toolbar button {
+  color: #6b7280 !important; /* gray-500 */
+  transition: all 0.2s ease;
+}
+
+.custom-quill .ql-toolbar button:hover,
+.custom-quill .ql-toolbar button.ql-active {
+  color: #d1d5db !important; /* gray-300 */
+  background: transparent !important;
+}
+
+/* Dropdown styling */
+.custom-quill .ql-picker,
+.custom-quill .ql-picker-label,
+.custom-quill .ql-picker-item {
+  color: #6b7280 !important; /* gray-500 */
+}
+
+.custom-quill .ql-picker-options {
+  background-color: #565c64 !important; /* gray-700 */
+  border: 1px solid #4b5563 !important; /* gray-600 */
+  border-radius: 4px;
+  color:rgb(207, 197, 197) !important;
+}
+
+.custom-quill .ql-picker-options:hover {
+  background-color: #4b5563 !important; /* gray-600 */
+  color: #ba0d1c !important; /* gray-300 */
+}
+
+/* ===== CRITICAL FIX: LIST STYLING IN EDITOR ===== */
+.custom-quill .ql-editor ul {
+  list-style-type: disc !important;
+  margin-left: 1rem !important;
+  padding-left: 1rem !important;
+  color: #d1d5db !important; /* gray-300 */
+}
+
+.custom-quill .ql-editor ol {
+  list-style-type: decimal !important;
+  margin-left: 1rem !important;
+  padding-left: 1rem !important;
+  color: #d1d5db !important; /* gray-300 */
+}
+
+.custom-quill .ql-editor li {
+  margin-bottom: 0.25rem !important;
+  color: #d1d5db !important; /* gray-300 */
+}
+
+/* Ensure Quill generates proper list HTML */
+.custom-quill .ql-editor ul li:before {
+  content: none !important;
+}
+
+.custom-quill .ql-editor ol li:before {
+  content: none !important;
+}
+
+/* ===== CRITICAL FIX: LIST STYLING IN PREVIEW ===== */
+.rich-text-preview {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+.rich-text-preview ul {
+  list-style-type: disc !important;
+  margin-left: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  color: #d1d5db !important;
+}
+
+.rich-text-preview ol {
+  list-style-type: decimal !important;
+  margin-left: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  color: #d1d5db !important;
+}
+
+.rich-text-preview li {
+  margin-bottom: 0.25rem !important;
+  display: list-item !important;
+  color: #d1d5db !important;
+}
+.custom-unordered-list {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+  padding-left: 1rem;
+}
+
+.custom-ordered-list {
+  list-style-type: decimal;
+  margin-left: 1.25rem;
+  padding-left: 1rem;
+}
+
+.custom-list-item {
+  margin-bottom: 0.25rem;
+}
+/* Override any prose styles that might interfere */
+.rich-text-preview {
+  all: initial;
+}
+
+.rich-text-preview * {
+  all: revert;
+  color: #d1d5db !important; /* gray-300 */
+}
+
+/* Ensure proper spacing */
+.rich-text-preview p {
+  margin-bottom: 0.5rem !important;
+  color: #d1d5db !important;
+}
+
+.rich-text-preview p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Text colors for different elements */
+.rich-text-preview strong,
+.rich-text-preview b {
+  color: #d1d5db !important; /* gray-300 */
+  font-weight: bold;
+}
+
+.rich-text-preview em,
+.rich-text-preview i {
+  color: #d1d5db !important; /* gray-300 */
+  font-style: italic;
+}
+
+.rich-text-preview u {
+  color: #d1d5db !important; /* gray-300 */
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .custom-quill .ql-toolbar {
+    padding: 8px 0 !important;
+  }
+  
+  .custom-quill .ql-toolbar .ql-formats {
+    margin-right: 8px !important;
+  }
+  
+  .custom-quill .ql-editor {
+    min-height: 120px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-quill .ql-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .custom-quill .ql-toolbar .ql-formats {
+    margin-bottom: 4px;
+  }
+}
+
+/* Fix list styles for Quill output */
+.role-description ol {
+  list-style-type: decimal;
+  margin-left: 1.25rem;
+  padding-left: 1rem;
+}
+
+.role-description ul,
+.role-description ol[data-list="bullet"] {
+  list-style-type: disc !important;
+  margin-left: 1.25rem;
+  padding-left: 1rem;
+}
+
+.role-description li {
+  margin-bottom: 0.25rem;
+}

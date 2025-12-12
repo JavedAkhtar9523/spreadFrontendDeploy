@@ -1,0 +1,20 @@
+/* Fix dropdown background + limited height on native select */
+select.custom-select option {
+  background-color: #10151b;
+  color: #d1d5db;
+}
+
+/* This part affects browsers that allow scroll inside dropdowns */
+select.custom-select {
+  max-height: 500px !important;
+  overflow-y: auto;
+}
+
+/* For WebKit browsers (Chrome/Edge) */
+select.custom-select::-webkit-scrollbar {
+  width: 8px;
+}
+select.custom-select::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 10px;
+}
