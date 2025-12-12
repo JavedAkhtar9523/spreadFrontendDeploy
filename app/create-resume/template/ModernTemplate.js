@@ -32,7 +32,7 @@ import {
 } from "react-icons/fa";
 import { getPlatformIconObject } from "../../utils/resumeUtils";
 import PageBreakHandler from "./PageBreakHandler";
-import Page from "@/app/course/page";
+
 import { FaCalendarAlt } from "react-icons/fa";
 import { CiCalendarDate } from "react-icons/ci";
 import { useRef, useState } from "react";

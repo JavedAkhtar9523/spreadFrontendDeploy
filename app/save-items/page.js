@@ -4,7 +4,7 @@ import React, { useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleSaveItem, selectCurrentUser } from "../store/userSlice";
 import { Trash2, Bookmark } from "lucide-react";
-import LinkButton from "../button/Button";
+import LinkButton from "../components/button/Button";
 
 export default function SavedItemsPage() {
   const dispatch = useDispatch();

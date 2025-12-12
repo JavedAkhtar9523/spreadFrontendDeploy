@@ -3,7 +3,7 @@ import React from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { users } from "../../../constents/constents";
-import PostCard from "../../../post/PostCard";
+import PostCard from "../../../feeds/PostCard";
 
 export default function ActivityPage() {
   const { type } = useParams(); // "all" | "posts" | "comments" | "likes" | "repost"
