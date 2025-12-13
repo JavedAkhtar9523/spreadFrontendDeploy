@@ -269,8 +269,13 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ||
-  "https://spreadbackedn.onrender.com/api";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:5000/api";
+
+// Debug log (remove in production if you want)
+if (typeof window !== "undefined") {
+  console.log("🔗 API Base URL:", API_BASE_URL);
+  console.log("🌍 Environment:", process.env.NODE_ENV);
+}
 
 // registerUser & loginUser same as before (keep your existing thunks)
 export const registerUser = createAsyncThunk(
