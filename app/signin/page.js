@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import TakeASpinSlider from "../signup/LeftSliderForSinUp";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
-import { InputField } from "../components/InputField"
+import { InputField } from "../components/InputField";
 
 const GradientTypingText = () => {
   const text = "your next move, your next legacy...";
@@ -60,7 +60,6 @@ const GradientTypingText = () => {
   );
 };
 // Custom Input Field Component
-
 
 export default function SpreadsSignIn() {
   const [formData, setFormData] = useState({
@@ -197,7 +196,8 @@ export default function SpreadsSignIn() {
     setAuthError(null);
 
     try {
-      const res = await fetch("http://localhost:5000/api/user/login", {
+      // const res = await fetch("http://localhost:5000/api/user/login", {
+      const res = await fetch(`${API_BASE_URL}/user/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -250,8 +250,6 @@ export default function SpreadsSignIn() {
     }
   }, [authError]);
 
-
-
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-white px-[10%]">
       {/* Left Side */}
@@ -296,27 +294,26 @@ export default function SpreadsSignIn() {
               onBlur={handleBlur}
               error={errors.email}
               touched={touched.email}
-              customBorder={true}   // gradient border true 
+              customBorder={true} // gradient border true
               gradientFrom="#000ACE"
               gradientTo="#C2009B"
             />
-           
+
             {/* Password Input */}
             <div className="relative">
-
               <InputField
-              name="password"
-              type={showPassword ? "text" : "password"}
-               label="Password"
+                name="password"
+                type={showPassword ? "text" : "password"}
+                label="Password"
                 value={formData.password}
                 onChange={handleInputChange}
                 onBlur={handleBlur}
-              customBorder={true}   // gradient border true 
-              gradientFrom="#000ACE"
-              gradientTo="#C2009B"
-              error={errors.password}
-              touched={touched.password}
-            />
+                customBorder={true} // gradient border true
+                gradientFrom="#000ACE"
+                gradientTo="#C2009B"
+                error={errors.password}
+                touched={touched.password}
+              />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
@@ -328,7 +325,6 @@ export default function SpreadsSignIn() {
                   <FaRegEyeSlash size={18} />
                 )}
               </button>
-            
             </div>
 
             <div className="flex flex-col sm:flex-row justify-between text-sm mt-1 gap-2 sm:gap-0">

@@ -283,7 +283,7 @@ export const registerUser = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        `${API_BASE_URL}/auth/register`,
+        `${API_BASE_URL}/user/register`,
         userData
       );
       toast.success("Registration successful! Please log in.", {
@@ -302,7 +302,7 @@ export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${API_BASE_URL}/auth/login`, {
+      const response = await axios.post(`${API_BASE_URL}/user/login`, {
         email,
         password,
       });
